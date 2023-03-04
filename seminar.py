@@ -1,4 +1,51 @@
 #HOMEWORK
+import random
+
+# Задача 30:  Заполните массив элементами арифметической прогрессии. Её первый элемент, разность и количество элементов нужно ввести с клавиатуры. Формула для получения n-го члена прогрессии: an = a1 + (n-1) * d.
+# Каждое число вводится с новой строки.
+
+# a1 = int(input('input start num '))
+# d = int(input('input step '))
+# n = int(input('input max quantity '))
+# list_1 = []
+# for i in range(n):
+#     an = (a1 + i * d)
+#     list_1.append(an)
+# print(list_1)
+#
+
+
+
+
+
+#Задача 32: Определить индексы элементов массива (списка), значения которых принадлежат заданному диапазону (т.е. не меньше заданного минимума и не больше заданного максимума)
+
+#
+# size = int(input('Input size '))
+# list_1 = [random.randint(0,10) for _ in range(size)]
+# print(list_1)
+# list_2 = []
+# min = int(input('input min quantity '))
+# max = int(input('inpit max quantity '))
+# for i in range (len(list_1)):
+#     if min <= list_1[i] <= max:
+#         list_2.append(i)
+# print(list_2)
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #
 # Задача 26:  Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
@@ -912,4 +959,186 @@
 #
 # print(f(n))
 
+
+
+
+# ____функции высшего порядка
+
+
+
+
+# def f(x):
+#     return x*x
+# a = f
+# print(type(f))
+
+# def calc1(a, b):
+#     return a + b
+# def calc2(a, b):
+#     return a*b
+# def math(op, x, y):## op - передача функции
+#     print(op(x,y))
+# math(calc2,5, 45)
+
+# calc1= lambda a,b: a + b
+# math(calc1, 5 , 45)
+
+# data = [1, 2, 3, 5, 8, 15, 25, 38]
+# res = list()
+# for i in data:
+#     if i % 2 ==0:
+#         res.append((i, i**2))
+# print(res)
+
+
+# def select(f, col):
+#     return [f(x) for x in col]
+# def where(f , col):
+#     return [x for x in col if f(x)]
+# data = [1, 2, 3, 5, 8, 15, 25, 38]
+# res = select(int,data )
+# print(res)
+# res = where(lambda  x: x %2 ==0, res)
+# print(res)
+# res = list(select(lambda x: (x, x**2), res))
+# print(res)
+#
+
+# ФУНКЦИЯ MAP____________
+
+
+
+# list_1 = [x for x in range (1,20)]
+# print(list_1)
+# list_1 = list(map(lambda x: x+10, list_1))
+# print(list_1)
+
+
+
+
+
+
+
+# data = '15 156 98 5 65 85 2'
+# print(data)
+# # data = data.split()
+# # print(data)
+# data = list(map(int, data.split()))
+# print(data)
+
+
+
+# функция FILTER
+
+# data = [15, 60, 9, 16, 175]
+# res = list(filter(lambda x: x %10 ==5, data))
+# print(res)
+
+# функция ZIP
+
+# Планеты вращаются вокруг звезд по эллиптическим орбитам. Назовем самой далекой планетой ту, орбита которой имеет самую большую площадь. Напишите функцию find_farthest_orbit(list_of_orbits), которая среди списка орбит планет найдет ту, по которой вращается самая далекая планета. Круговые орбиты не учитывайте: вы знаете, что у вашей звезды таких планет нет, зато искусственные спутники были были запущены на круговые орбиты. Результатом функции должен быть кортеж, содержащий длины полуосей эллипса орбиты самой далекой планеты. Каждая орбита представляет из себя кортеж из пары чисел - полуосей ее эллипса. Площадь эллипса вычисляется по формуле S = piab, где a и b - длины полуосей эллипса. При решении задачи используйте списочные выражения. Подсказка: проще всего будет найти эллипс в два шага: сначала вычислить самую большую площадь эллипса, а затем найти и сам эллипс, имеющий такую площадь. Гарантируется, что самая далекая планета ровно одна
+
+
+# list_planets = [(2, 3), (4, 7), (3, 3),
+#                 (7, 6), (1, 8), (2, 2),
+#                 (5, 6), (6, 3), (2, 8)]
+#
+#
+# list_planets_2 = []
+#
+# for i in range(len(list_planets)):
+#     if list_planets[i][0] != list_planets[i][1]:
+#         list_planets_2.append(list_planets[i][0]*list_planets[i][1])
+# print(list_planets_2)
+# a = list_planets_2.index(max(list_planets_2))
+#
+#
+#
+# print('максимальная площадь элипса', max(list_planets_2),'index' ,  list_planets_2.index(max(list_planets_2)))
+#
+
+
+
+# Дан массив, состоящий из целых чисел. Напишите программу, которая в данном массиве определит количество элементов, у которых два соседних и, при этом, оба соседних элемента меньше данного. Сначала вводится число N — количество элементов в массиве Далее записаны N чисел — элементы массива. Массив состоит из целых чисел.
+
+
+# size = int(input('Input size '))
+# list_1 = [random.randint(0,10) for _ in range(size)]
+# count = 0
+# list_2 = []
+# for i in range(1, len(list_1) -1):
+#     if list_1[i -1] < list_1[i] > list_1[i + 1]:
+#         count += 1
+#         list_2.append(list_1[i])
+# print(list_1)
+# print(count)
+# print(list_2)
+#
+#
+
+
+
+
+# Дан список чисел. Посчитайте, сколько в нем пар элементов, равных друг другу. Считается, что любые два элемента, равные друг другу образуют одну пару, которую необходимо посчитать.
+# Вводится список чисел. Все числа списка находятся на разных строках.
+
+# size = int(input('Input size '))
+# list_1 = [random.randint(0,10) for _ in range(size)]
+# count = 0
+# pairs = []
+# total = 0
+# for i in list_1:
+#     if i not in pairs:
+#         count = list_1.count(i)
+#         total += count//2
+#         pairs.append(i)
+# print(list_1, total)
+
+
+
+
+
+
+
+
+
+
+# Даны два массива чисел. Требуется вывести те элементы первого массива (в том порядке, в каком они идут в первом массиве), которых нет во втором массиве. Пользователь вводит число N - количество элементов в первом массиве, затем N чисел - элементы массива. Затем число M - количество элементов во втором массиве. Затем элементы второго массива
+#
+
+
+
+# size = int(input('Input size '))
+# list_1 = [random.randint(0,10) for _ in range(size)]
+# print(list_1)
+# size2 = int(input('Input size2 '))
+# list_2 = [random.randint(0,10) for _ in range(size2)]
+# print(list_2)
+# list_3 = []
+#
+# for item in list_1:
+#     if not item in list_2:
+#             list_3.append(item)
+# print(list_3)
+
+
+
+# Напишите программу, которая найдёт произведение пар чисел списка. Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+#
+# size = int(input('Input size '))
+# list_1 = [random.randint(0,10) for _ in range(size)]
+# print(list_1)
+# list_2 =[]
+# if len(list_1) %2==0:
+#     for i in range(len(list_1)//2):
+#         mult = list_1[i] * list_1[len(list_1)-i -1]
+#         list_2.append(mult)
+# else:
+#     for i in range(len(list_1)//2+1):
+#         mult = list_1[i] * list_1[len(list_1)-i -1]
+#         list_2.append(mult)
+# print(list_2)
+#
+#
+#
 
