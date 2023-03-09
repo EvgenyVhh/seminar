@@ -1,5 +1,55 @@
-#HOMEWORK
 import random
+#HOMEWORK
+
+
+#Задача 34:  Винни-Пух попросил Вас посмотреть, есть ли в его стихах ритм. Поскольку разобраться в его кричалках не настолько просто, насколько легко он их придумывает, Вам стоит написать программу. Винни-Пух считает, что ритм есть, если число слогов (т.е. число гласных букв) в каждой фразе стихотворения одинаковое. Фраза может состоять из одного слова, если во фразе несколько слов, то они разделяются дефисами. Фразы отделяются друг от друга пробелами. Стихотворение  Винни-Пух вбивает в программу с клавиатуры. В ответе напишите “Парам пам-пам”, если с ритмом все в порядке и “Пам парам”, если с ритмом все не в порядке
+
+
+# stih = input('введите фразу ')
+# list = stih.split()
+# print(list)
+#
+# list_1 = [sum(x in 'уеыаоэяию' for x in str)
+#        for str in list]
+#
+# if len(set(list_1)) == 1:
+#     res = "Парам пам-пам"
+# else:
+#     res = "Пам парам"
+#
+# print(res)
+#
+#
+
+
+
+
+
+
+# Задача 36: Напишите функцию print_operation_table(operation, num_rows=6, num_columns=6), которая принимает в качестве аргумента функцию, вычисляющую элемент по номеру строки и столбца. Аргументы num_rows и num_columns указывают число строк и столбцов таблицы, которые должны быть распечатаны. Нумерация строк и столбцов идет с единицы (подумайте, почему не с нуля). Примечание: бинарной операцией называется любая операция, у которой ровно два аргумента, как, например, у операции умножения.
+
+# def print_operation_table(operation, num_rows: int, num_columns: int):
+#     for row in range(1, num_rows +1):
+#         for column in range(1, num_columns +1):
+#             print(f'{operation(row, column):^7}',end='')
+#         print()
+#
+# def operation(x,y):
+#     return x+y
+# print_operation_table(operation,num_rows = 6, num_columns = 6)
+#
+#
+
+
+
+
+
+
+
+
+
+
+
 
 # Задача 30:  Заполните массив элементами арифметической прогрессии. Её первый элемент, разность и количество элементов нужно ввести с клавиатуры. Формула для получения n-го члена прогрессии: an = a1 + (n-1) * d.
 # Каждое число вводится с новой строки.
@@ -1140,5 +1190,122 @@ import random
 # print(list_2)
 #
 #
+
+
+
+
+
+
+
+
+
+
+
 #
+#
+# phone_book = []
+# path = 'file.txt'
+#
+# def open_file(path):
+#     with open(path, 'r', encoding='UTF-8') as file:
+#         data = file.readlines()
+#         for contact in data:
+#             cont = []
+#             for field in contact.split(';'):
+#                 cont.append(field.strip())
+#             phone_book.append(cont)
+#
+#
+# def show_contacts(phone_book):
+#     for i, contact in enumerate(phone_book, 1):
+#         print(f'{i}. {contact[0]:<20}{contact[1]:<20}{contact[2]:<15}')
+#
+# def add_contact():
+#     name = input('Введите имя и фамилию: ')
+#     phone = input('Введите телефон: ')
+#     comment = input('Введите комментарий: ')
+#     phone_book.append(list([name, phone, comment]))
+#
+# def search_contact(phone_book):
+#     search = input('Введите ключевой элемент : ')
+#     for contact in phone_book:
+#         for field in contact:
+#             if search in field:
+#                 print(contact)
+#
+#
+# while True:
+#     print('''Главное меню:
+#     1. Открыть файл
+#     2. Сохранить файл
+#     3. Показать все контакты
+#     4. Создать контакт
+#     5. Изменить контакт
+#     6. Найти контакт
+#     7. Удалить контакт
+#     8. Выход''')
+#     number = int(input('Введите пункт меню: '))
+#
+#     match number:
+#         case 1:
+#             open_file(path)
+#             print('Файл успешно загружен')
+#         case 2:
+#             pass
+#         case 3:
+#             show_contacts(phone_book)
+#         case 4:
+#             add_contact()
+#         case 6:
+#             search_contact(phone_book)
+#         case 8:
+#             break
+#
+#
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
