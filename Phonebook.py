@@ -20,11 +20,18 @@ def open_file(path):
 
 
 def safe_file():
-
+    file_to_save = []
     with open("file.txt", "w", encoding='UTF8') as file:
-        file.write(str(phone_book))
+    #     file.write(str(phone_book))
 
-    print('изменения сохранены')
+        for contact in phone_book:
+            dtr_list = []
+            for value in contact:
+                dtr_list.append(value)
+            file_to_save.append(';'.join(dtr_list))
+
+        file.write(str('\n'.join(file_to_save)))
+print('изменения сохранены')
 
 
 
